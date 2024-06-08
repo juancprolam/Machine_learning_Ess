@@ -73,13 +73,13 @@ def rectify(x):
 
 
 # Return weighted dropout
-def dropout(X, p_drop = 0.5):
-    if (p_drop < 1) and (p_drop > 0):
-        rv = binom(1, p_drop)
-        x_mask = rv.rvs(size = X.shape)
-        return X * x_mask.astype(bool) * 1 / (1 - p_drop)
-    else:
-        return X
+# Apparently, torch doesn't like playing with other kids. Use torch.rand
+# instead of python's other methods, such as numpy random or scipy binom.
+def dropout(X, p_drop=0.5):
+    retain_prob = 1 - p_drop
+    mask = (torch.rand(X.shape) < retain_prob).float()
+    X = X * mask / retain_prob
+    return X
 
 
 class RMSprop(optim.Optimizer):
