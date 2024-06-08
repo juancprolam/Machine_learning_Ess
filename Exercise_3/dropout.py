@@ -17,6 +17,8 @@ from torch.nn.functional import conv2d, max_pool2d, cross_entropy
 # Tools
 import time
 from tqdm import tqdm
+import os
+import glob
 
 plt.rc("figure", dpi = 200)
 
@@ -75,10 +77,12 @@ def rectify(x):
 # Return weighted dropout
 # Apparently, torch doesn't like playing with other kids. Use torch.rand
 # instead of python's other methods, such as numpy random or scipy binom.
-def dropout(X, p_drop=0.5):
-    retain_prob = 1 - p_drop
-    mask = (torch.rand(X.shape) < retain_prob).float()
-    X = X * mask / retain_prob
+def dropout(X, p_drop = 0.3):
+    if p_drop < 0 or p_drop >= 1:
+        return X 
+    
+    mask = (torch.rand(X.shape) < 1 - p_drop).float()
+    X = X * mask / (1 - p_drop)
     return X
 
 
@@ -87,7 +91,7 @@ class RMSprop(optim.Optimizer):
     This is a reduced version of the PyTorch internal RMSprop optimizer
     It serves here as an example
     """
-    def __init__(self, params, lr=1e-3, alpha=0.5, eps=1e-8):
+    def __init__(self, params, lr = 1e-1, alpha = 0.5, eps = 1e-8):
         defaults = dict(lr=lr, alpha=alpha, eps=eps)
         super(RMSprop, self).__init__(params, defaults)
 
@@ -110,6 +114,13 @@ class RMSprop(optim.Optimizer):
 
                 # gradient update
                 p.data.addcdiv_(grad, avg, value=-group['lr'])
+                
+# define the neural network
+def model(x, w_h, w_h2, w_o):
+    h = rectify(x @ w_h)
+    h2 = rectify(h @ w_h2)
+    pre_softmax = h2 @ w_o
+    return pre_softmax
 
 
 def dropout_model(X, w_h, w_h2, w_o, p_drop_input, p_drop_hidden):
@@ -132,11 +143,14 @@ def calculate_accuracy(output, target):
     correct = (predicted == target).sum().item()
     return correct / target.size(0)
 
+# Remember to implement a checkpoint!!
+# Especially since my laptop takes longer than 1 hour to run this
 def load_checkpoint(filepath):
+    # Saved checkpoint in case of crash
     checkpoint = torch.load(filepath)
     start_epoch = checkpoint['epoch']
     w_h, w_h2, w_o = checkpoint['model_state_dict']
-    optimizer = RMSprop(params=[w_h, w_h2, w_o])
+    optimizer = RMSprop(params = [w_h, w_h2, w_o])
     optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
     train_loss = checkpoint['train_loss']
     test_loss = checkpoint['test_loss']
@@ -144,6 +158,16 @@ def load_checkpoint(filepath):
     test_accuracy = checkpoint['test_accuracy']
     return (start_epoch, w_h, w_h2, w_o, optimizer, 
             train_loss, test_loss, train_accuracy, test_accuracy)
+
+def find_latest_checkpoint(checkpoint_dir, 
+                           root = "checkpoint_dropout_epoch_*.pth"):
+    checkpoint_files = glob.glob(os.path.join(checkpoint_dir, root))
+    
+    if not checkpoint_files:
+        return None
+    
+    checkpoint_files.sort(key = os.path.getmtime)
+    return checkpoint_files[-1]
 
 
 # initialize weights
@@ -162,11 +186,15 @@ p_drop_hidden = 0.5
 
 optimizer = RMSprop(params=[w_h, w_h2, w_o])
             
-# Try to load from checkpoint
-try:
-    start_epoch, w_h, w_h2, w_o, optimizer, train_loss, test_loss, train_accuracy, test_accuracy = load_checkpoint('checkpoint_epoch_30.pth')
-    print(f"Resuming from epoch {start_epoch}...")
-except FileNotFoundError:
+# Can you load from checkpoint?
+checkpoint_dir = '.'
+latest_checkpoint = find_latest_checkpoint(checkpoint_dir)
+if latest_checkpoint:
+    (start_epoch, w_h, w_h2, w_o, optimizer, 
+     train_loss, test_loss, train_accuracy, test_accuracy) \
+        = load_checkpoint(latest_checkpoint)
+    print(f"Resuming training from epoch {start_epoch}")
+else:
     start_epoch = 0
     train_loss = []
     test_loss = []
@@ -251,19 +279,7 @@ for epoch in tqdm(range(start_epoch + 1, n_epochs + 1)):
             'test_loss': test_loss,
             'train_accuracy': train_accuracy,
             'test_accuracy': test_accuracy
-        }, f'checkpoint_epoch_{epoch}.pth')
+        }, f'checkpoint_dropout_epoch_{epoch}.pth')
         
     end_time = time.time()
     
-    
-plt.plot(np.arange(n_epochs + 1), 
-         train_loss, 
-         label = "Train")
-plt.plot(np.arange(1, n_epochs + 2, 10), 
-         test_loss, 
-         label = "Test")
-plt.title("Train and Test Loss over Training")
-plt.xlabel("Epoch")
-plt.ylabel("Loss")
-plt.savefig('Loss_dropout.png')
-plt.legend()
