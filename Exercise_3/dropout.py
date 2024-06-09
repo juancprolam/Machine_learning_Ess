@@ -20,7 +20,25 @@ from tqdm import tqdm
 import os
 import glob
 
-plt.rc("figure", dpi = 200)
+## Plot options
+from cycler import cycler
+from matplotlib import rcParams
+rcParams['axes.grid'] = True
+rcParams['grid.linestyle'] = '--'
+rcParams['grid.alpha'] = 0.5
+rcParams['axes.labelsize'] = 20
+rcParams['axes.prop_cycle'] = cycler('color', ['#C61A27', '#3891A6', \
+                                               '#F79D65', '#FDE74C'])
+rcParams['axes.titlesize'] = 22
+rcParams['figure.figsize'] = (12, 7)
+rcParams['figure.titlesize'] = 26
+rcParams['font.size'] = 16
+rcParams['image.cmap'] = 'magma'
+rcParams['lines.markeredgewidth'] = 2
+rcParams['lines.markerfacecolor'] = 'white'
+rcParams['markers.fillstyle'] = 'none'
+
+## Machine learning model
 
 batch_size = 100
 
@@ -91,7 +109,7 @@ class RMSprop(optim.Optimizer):
     This is a reduced version of the PyTorch internal RMSprop optimizer
     It serves here as an example
     """
-    def __init__(self, params, lr = 1e-1, alpha = 0.5, eps = 1e-8):
+    def __init__(self, params, lr = 1e-4, alpha = 0.5, eps = 1e-8):
         defaults = dict(lr=lr, alpha=alpha, eps=eps)
         super(RMSprop, self).__init__(params, defaults)
 
@@ -282,4 +300,31 @@ for epoch in tqdm(range(start_epoch + 1, n_epochs + 1)):
         }, f'checkpoint_dropout_epoch_{epoch}.pth')
         
     end_time = time.time()
-    
+
+# Loss plot
+plt.figure()
+plt.plot(np.arange(n_epochs), 
+         train_loss, 
+         label = "Train")
+plt.plot(np.arange(1, n_epochs + 1, 10), 
+         test_loss, 
+         label = "Test")
+plt.title("Train and Test Loss over Training")
+plt.xlabel("Epoch")
+plt.ylabel("Loss")
+plt.legend()
+plt.savefig('Loss_dropout.png')
+
+# Accuracy plot
+plt.figure()
+plt.plot(np.arange(n_epochs), 
+         train_accuracy, 
+         label = "Train")
+plt.plot(np.arange(1, n_epochs + 1, 10), 
+         test_accuracy, 
+         label = "Test")
+plt.title("Train and Test Accuracy over Training")
+plt.xlabel("Epoch")
+plt.ylabel("Accuracy")
+plt.legend()
+plt.savefig('Accuracy_dropout.png')
