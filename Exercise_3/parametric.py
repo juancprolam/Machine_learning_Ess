@@ -302,7 +302,7 @@ plt.plot(np.arange(n_epochs),
 plt.plot(np.arange(1, n_epochs + 1, 10), 
          test_loss, 
          label = "Test")
-plt.title("Train and Test Loss over Training")
+plt.title("Train and Test Loss over Training\nParametric model")
 plt.xlabel("Epoch")
 plt.ylabel("Loss")
 plt.legend()
@@ -315,7 +315,7 @@ plt.plot(np.arange(n_epochs),
 plt.plot(np.arange(1, n_epochs + 1, 10), 
          test_accuracy, 
          label = "Test")
-plt.title("Train and Test Accuracy over Training")
+plt.title("Train and Test Accuracy over Training\nParametric model")
 plt.xlabel("Epoch")
 plt.ylabel("Accuracy")
 plt.legend()
