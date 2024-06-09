@@ -220,13 +220,7 @@ else:
     test_accuracy = []
     print("Starting from scratch...")
 
-
 n_epochs = 100
-
-train_loss = []
-test_loss = []
-train_accuracy = []
-test_accuracy = []
 
 # Mark this as the start_time:
 start_time = time.time()
@@ -235,6 +229,7 @@ start_time = time.time()
 for epoch in tqdm(range(start_epoch + 1, n_epochs + 1)):
     train_loss_this_epoch = []
     train_correct = 0
+    
     for idx, batch in enumerate(train_dataloader):
         x, y = batch
         # our model requires flattened input
@@ -248,7 +243,6 @@ for epoch in tqdm(range(start_epoch + 1, n_epochs + 1)):
 
         # the cross-entropy loss function already contains the softmax
         loss = cross_entropy(noise_py_x, y, reduction = "mean")
-
         train_loss_this_epoch.append(float(loss))
 
         # compute the gradient
@@ -309,7 +303,7 @@ plt.plot(np.arange(n_epochs),
 plt.plot(np.arange(1, n_epochs + 1, 10), 
          test_loss, 
          label = "Test")
-plt.title("Train and Test Loss over Training")
+plt.title("Train and Test Loss over Training\nDropout model")
 plt.xlabel("Epoch")
 plt.ylabel("Loss")
 plt.legend()
@@ -323,7 +317,7 @@ plt.plot(np.arange(n_epochs),
 plt.plot(np.arange(1, n_epochs + 1, 10), 
          test_accuracy, 
          label = "Test")
-plt.title("Train and Test Accuracy over Training")
+plt.title("Train and Test Accuracy over Training\nDropout model")
 plt.xlabel("Epoch")
 plt.ylabel("Accuracy")
 plt.legend()
