@@ -164,8 +164,8 @@ def load_checkpoint(filepath):
     # Saved checkpoint in case of crash
     checkpoint = torch.load(filepath)
     start_epoch = checkpoint['epoch']
-    w_h, w_h2, w_o = checkpoint['model_state_dict']
-    optimizer = RMSprop(params = [w_h, w_h2, w_o])
+    w_h, w_h2, w_o, a = checkpoint['model_state_dict']
+    optimizer = RMSprop(params = [w_h, w_h2, w_o, a])
     optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
     train_loss = checkpoint['train_loss']
     test_loss = checkpoint['test_loss']
@@ -272,7 +272,7 @@ for epoch in tqdm(range(start_epoch + 1, n_epochs + 1)):
             for idx, batch in enumerate(test_dataloader):
                 x, y = batch
                 x = x.reshape(batch_size, 784)
-                noise_py_x = model(x, w_h, w_h2, w_o)
+                noise_py_x = parametric_model(x, w_h, w_h2, w_o, a)
 
                 loss = cross_entropy(noise_py_x, y, reduction = "mean")
                 test_loss_this_epoch.append(float(loss))
@@ -289,7 +289,7 @@ for epoch in tqdm(range(start_epoch + 1, n_epochs + 1)):
         # Save model checkpoints
         torch.save({
             'epoch': epoch,
-            'model_state_dict': [w_h, w_h2, w_o],
+            'model_state_dict': [w_h, w_h2, w_o, a],
             'optimizer_state_dict': optimizer.state_dict(),
             'train_loss': train_loss,
             'test_loss': test_loss,
