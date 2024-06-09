@@ -221,10 +221,6 @@ else:
 
 n_epochs = 100
 
-train_loss = []
-test_loss = []
-train_accuracy = []
-test_accuracy = []
 
 # Mark this as the start_time:
 start_time = time.time()
@@ -298,4 +294,29 @@ for epoch in tqdm(range(start_epoch + 1, n_epochs + 1)):
         }, f'checkpoint_parametric_epoch_{epoch}.pth')
         
     end_time = time.time()
-    
+
+plt.figure()
+plt.plot(np.arange(n_epochs), 
+         train_loss, 
+         label = "Train")
+plt.plot(np.arange(1, n_epochs + 1, 10), 
+         test_loss, 
+         label = "Test")
+plt.title("Train and Test Loss over Training")
+plt.xlabel("Epoch")
+plt.ylabel("Loss")
+plt.legend()
+plt.savefig('Loss_parametric.png')
+
+plt.figure()
+plt.plot(np.arange(n_epochs), 
+         train_accuracy, 
+         label = "Train")
+plt.plot(np.arange(1, n_epochs + 1, 10), 
+         test_accuracy, 
+         label = "Test")
+plt.title("Train and Test Accuracy over Training")
+plt.xlabel("Epoch")
+plt.ylabel("Accuracy")
+plt.legend()
+plt.savefig('Accuracy_parametric.png')
