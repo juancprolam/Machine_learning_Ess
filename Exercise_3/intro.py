@@ -242,7 +242,7 @@ for epoch in tqdm(range(start_epoch + 1, n_epochs + 1)):
             'test_loss': test_loss,
             'train_accuracy': train_accuracy,
             'test_accuracy': test_accuracy
-        }, f'checkpoint_dropout_epoch_{epoch}.pth')
+        }, f'checkpoint_intro_epoch_{epoch}.pth')
 
 ## Plots
 plt.figure()
