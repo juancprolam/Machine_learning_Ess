@@ -212,6 +212,7 @@ for epoch in tqdm(range(start_epoch + 1, n_epochs + 1)):
         print(f"Mean Train Loss: {train_loss[-1]:.2e}")
         print(f"Train Accuracy: {train_accuracy[-1]:.2%}")
         test_loss_this_epoch = []
+        test_correct = 0
 
         # no need to compute gradients for validation
         with torch.no_grad():
