@@ -154,6 +154,22 @@ def find_latest_checkpoint(checkpoint_dir,
     checkpoint_files.sort(key = os.path.getmtime)
     return checkpoint_files[-1]
 
+# Remember to implement a checkpoint!!
+# Especially since my laptop takes longer than 1 hour to run this
+def load_checkpoint(filepath):
+    # Saved checkpoint in case of crash
+    checkpoint = torch.load(filepath)
+    start_epoch = checkpoint['epoch']
+    w_h, w_h2, w_o = checkpoint['model_state_dict']
+    optimizer = RMSprop(params = [w_h, w_h2, w_o])
+    optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
+    train_loss = checkpoint['train_loss']
+    test_loss = checkpoint['test_loss']
+    train_accuracy = checkpoint['train_accuracy']
+    test_accuracy = checkpoint['test_accuracy']
+    return (start_epoch, w_h, w_h2, w_o, optimizer, 
+            train_loss, test_loss, train_accuracy, test_accuracy)
+
 # Can you load from checkpoint?
 checkpoint_dir = '.'
 latest_checkpoint = find_latest_checkpoint(checkpoint_dir)
