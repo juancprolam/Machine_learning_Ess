@@ -1,4 +1,22 @@
+## Plot options
+from cycler import cycler
+from matplotlib import rcParams
+rcParams['axes.grid'] = True
+rcParams['grid.linestyle'] = '--'
+rcParams['grid.alpha'] = 0.5
+rcParams['axes.labelsize'] = 20
+rcParams['axes.prop_cycle'] = cycler('color', ['#C61A27', '#3891A6', \
+                                               '#F79D65', '#FDE74C'])
+rcParams['axes.titlesize'] = 22
+rcParams['figure.figsize'] = (12, 7)
+rcParams['figure.titlesize'] = 26
+rcParams['font.size'] = 16
+rcParams['image.cmap'] = 'magma'
+rcParams['lines.markeredgewidth'] = 2
+rcParams['lines.markerfacecolor'] = 'white'
+rcParams['markers.fillstyle'] = 'none'
 
+## Task 1: Intro
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -10,6 +28,12 @@ import torchvision.datasets as datasets
 import torchvision.transforms as transforms
 
 from torch.nn.functional import conv2d, max_pool2d, cross_entropy
+
+# Tools
+import time
+from tqdm import tqdm
+import os
+import glob
 
 plt.rc("figure", dpi=100)
 
@@ -115,15 +139,46 @@ w_o = init_weights((625, 10))
 
 optimizer = RMSprop(params=[w_h, w_h2, w_o])
 
+def calculate_accuracy(output, target):
+    _, predicted = torch.max(output, 1)
+    correct = (predicted == target).sum().item()
+    return correct / target.size(0)
+
+def find_latest_checkpoint(checkpoint_dir, 
+                           root = "checkpoint_intro_epoch_*.pth"):
+    checkpoint_files = glob.glob(os.path.join(checkpoint_dir, root))
+    
+    if not checkpoint_files:
+        return None
+    
+    checkpoint_files.sort(key = os.path.getmtime)
+    return checkpoint_files[-1]
+
+# Can you load from checkpoint?
+checkpoint_dir = '.'
+latest_checkpoint = find_latest_checkpoint(checkpoint_dir)
+if latest_checkpoint:
+    (start_epoch, w_h, w_h2, w_o, optimizer, 
+     train_loss, test_loss, train_accuracy, test_accuracy) \
+        = load_checkpoint(latest_checkpoint)
+    print(f"Resuming training from epoch {start_epoch}")
+else:
+    start_epoch = 0
+    train_loss = []
+    test_loss = []
+    train_accuracy = []
+    test_accuracy = []
+    print("Starting from scratch...")
+
 
 n_epochs = 100
 
-train_loss = []
-test_loss = []
 
 # put this into a training loop over 100 epochs
-for epoch in range(n_epochs + 1):
+for epoch in tqdm(range(start_epoch + 1, n_epochs + 1)):
     train_loss_this_epoch = []
+    train_correct = 0
+    
     for idx, batch in enumerate(train_dataloader):
         x, y = batch
 
@@ -144,14 +199,20 @@ for epoch in range(n_epochs + 1):
         loss.backward()
         # update weights
         optimizer.step()
+        
+        # Calculate accuracy
+        train_correct += (torch.argmax(noise_py_x, dim=1) == y).sum().item()
 
     train_loss.append(np.mean(train_loss_this_epoch))
+    train_accuracy.append(train_correct / len(train_dataset))
 
     # test periodically
     if epoch % 10 == 0:
         print(f"Epoch: {epoch}")
         print(f"Mean Train Loss: {train_loss[-1]:.2e}")
+        print(f"Train Accuracy: {train_accuracy[-1]:.2%}")
         test_loss_this_epoch = []
+        test_correct = 0
 
         # no need to compute gradients for validation
         with torch.no_grad():
@@ -162,14 +223,50 @@ for epoch in range(n_epochs + 1):
 
                 loss = cross_entropy(noise_py_x, y, reduction="mean")
                 test_loss_this_epoch.append(float(loss))
+                # Calculate accuracy
+                test_correct += (torch.argmax(noise_py_x, dim=1) == y).sum().item()
+
 
         test_loss.append(np.mean(test_loss_this_epoch))
+        test_accuracy.append(test_correct / len(test_dataset))
 
         print(f"Mean Test Loss:  {test_loss[-1]:.2e}")
+        print(f"Test Accuracy: {test_accuracy[-1]:.2%}")
+        
+        # Save model checkpoints
+        torch.save({
+            'epoch': epoch,
+            'model_state_dict': [w_h, w_h2, w_o],
+            'optimizer_state_dict': optimizer.state_dict(),
+            'train_loss': train_loss,
+            'test_loss': test_loss,
+            'train_accuracy': train_accuracy,
+            'test_accuracy': test_accuracy
+        }, f'checkpoint_dropout_epoch_{epoch}.pth')
 
-plt.plot(np.arange(n_epochs + 1), train_loss, label="Train")
-plt.plot(np.arange(1, n_epochs + 2, 10), test_loss, label="Test")
+## Plots
+plt.figure()
+plt.plot(np.arange(n_epochs), 
+         train_loss, 
+         label = "Train")
+plt.plot(np.arange(1, n_epochs + 1, 10), 
+         test_loss, 
+         label = "Test")
 plt.title("Train and Test Loss over Training")
 plt.xlabel("Epoch")
 plt.ylabel("Loss")
 plt.legend()
+plt.savefig('Loss_intro.png')
+
+plt.figure()
+plt.plot(np.arange(n_epochs), 
+         train_accuracy, 
+         label = "Train")
+plt.plot(np.arange(1, n_epochs + 1, 10), 
+         test_accuracy, 
+         label = "Test")
+plt.title("Train and Test Accuracy over Training")
+plt.xlabel("Epoch")
+plt.ylabel("Accuracy")
+plt.legend()
+plt.savefig('Accuracy_intro.png')
