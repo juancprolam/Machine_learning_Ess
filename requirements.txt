@@ -6,4 +6,5 @@ hydra-core
 mlflow==2.4.1
 scikit-learn
 torchvision
-pygame tqdm
+pygame 
+tqdm
