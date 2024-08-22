@@ -6,6 +6,8 @@ from typing import List
 import events as e
 from .callbacks import state_to_features
 
+import time
+
 # This is only an example!
 Transition = namedtuple('Transition',
                         ('state', 'action', 'next_state', 'reward'))
@@ -16,7 +18,6 @@ RECORD_ENEMY_TRANSITIONS = 1.0  # record enemy transitions with probability ...
 
 # Events
 PLACEHOLDER_EVENT = "PLACEHOLDER"
-
 
 def setup_training(self):
     """

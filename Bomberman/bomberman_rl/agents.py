@@ -55,7 +55,6 @@ class Agent:
 
     def __init__(self, agent_name, code_name, display_name, train: bool, backend: "AgentBackend", avatar_sprite_desc, bomb_sprite_desc):
         self.backend = backend
-
         # Load custom avatar or standard robot avatar of assigned color
         try:
             if isinstance(avatar_sprite_desc, bytes):
@@ -248,7 +247,7 @@ class AgentRunner:
             event_result = getattr(module, event_name)(self.fake_self, *event_args)
             duration = time() - start_time
             self.wlogger.debug(f"Got result from callback#{event_name} in {duration:.3f}s.")
-
+            
             self.result_queue.put((event_name, duration, event_result))
         except BaseException as e:
             self.wlogger.exception(e)
