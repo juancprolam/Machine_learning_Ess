@@ -1,0 +1,186 @@
+2024-08-28 11:18:17,267 [brute_force_agent_code] INFO: Setting up Q-table from scratch
+2024-08-28 11:18:17,952 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:17,954 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:17,966 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:17,967 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:18,092 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:18,092 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:18,169 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:18,170 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:18,266 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:18,267 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:18,487 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:18,489 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:18,504 [brute_force_agent_code] DEBUG: Choosing action purely at random.
+2024-08-28 11:18:18,509 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:18,597 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:18,597 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:18,699 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:18,700 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:18,803 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:18,804 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:18,905 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:18,906 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:19,006 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:19,007 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:19,107 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:19,108 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:19,207 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:19,207 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:19,309 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:19,310 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:19,409 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:19,410 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:19,506 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:19,507 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:19,604 [brute_force_agent_code] DEBUG: Choosing action purely at random.
+2024-08-28 11:18:19,605 [brute_force_agent_code] DEBUG: Events occurred: WAITED
+2024-08-28 11:18:19,712 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:19,712 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:19,816 [brute_force_agent_code] DEBUG: Choosing action purely at random.
+2024-08-28 11:18:19,818 [brute_force_agent_code] DEBUG: Events occurred: WAITED
+2024-08-28 11:18:19,914 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:19,915 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:20,015 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:20,016 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:20,116 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:20,117 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:20,218 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:20,219 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:20,319 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:20,320 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:20,420 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:20,421 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:20,521 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:20,522 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:20,621 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:20,622 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:20,722 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:20,723 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:20,823 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:20,824 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:20,922 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:20,923 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:21,025 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:21,025 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:21,125 [brute_force_agent_code] DEBUG: Choosing action purely at random.
+2024-08-28 11:18:21,126 [brute_force_agent_code] DEBUG: Events occurred: MOVED_DOWN
+2024-08-28 11:18:21,226 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:21,227 [brute_force_agent_code] DEBUG: Events occurred: MOVED_UP
+2024-08-28 11:18:21,327 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:21,328 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:21,427 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:21,428 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:21,529 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:21,530 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:21,630 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:21,631 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:21,729 [brute_force_agent_code] DEBUG: Choosing action purely at random.
+2024-08-28 11:18:21,730 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:21,830 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:21,831 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:21,930 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:21,931 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:22,030 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:22,031 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:22,131 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:22,132 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:22,232 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:22,233 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:22,337 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:22,337 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:22,436 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:22,437 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:22,536 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:22,537 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:22,634 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:22,635 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:22,738 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:22,739 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:22,837 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:22,837 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:22,937 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:22,938 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:23,039 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:23,040 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:23,140 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:23,140 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:23,240 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:23,241 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:23,338 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:23,339 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:23,441 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:23,442 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:23,543 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:23,544 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:23,641 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:23,642 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:23,741 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:23,742 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:23,842 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:23,843 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:23,944 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:23,945 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:24,045 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:24,046 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:24,143 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:24,144 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:24,244 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:24,244 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:24,342 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:24,343 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:24,444 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:24,445 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:24,545 [brute_force_agent_code] DEBUG: Choosing action purely at random.
+2024-08-28 11:18:24,546 [brute_force_agent_code] DEBUG: Events occurred: MOVED_DOWN
+2024-08-28 11:18:24,648 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:24,648 [brute_force_agent_code] DEBUG: Events occurred: MOVED_UP
+2024-08-28 11:18:24,750 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:24,750 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:24,849 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:24,850 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:24,952 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:24,953 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:25,049 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:25,050 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:25,153 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:25,153 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:25,251 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:25,251 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:25,349 [brute_force_agent_code] DEBUG: Choosing action purely at random.
+2024-08-28 11:18:25,350 [brute_force_agent_code] DEBUG: Events occurred: WAITED
+2024-08-28 11:18:25,447 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:25,448 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:25,547 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:25,548 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:25,650 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:25,650 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:25,751 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:25,752 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:25,850 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:25,851 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:25,951 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:25,951 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:26,051 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:26,052 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:26,151 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:26,152 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:26,256 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:26,257 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:26,350 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:26,351 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:26,457 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:26,460 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:26,558 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:26,559 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:26,655 [brute_force_agent_code] DEBUG: Choosing action purely at random.
+2024-08-28 11:18:26,656 [brute_force_agent_code] DEBUG: Events occurred: BOMB_DROPPED
+2024-08-28 11:18:26,756 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:26,756 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:26,856 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:26,856 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:26,954 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:26,954 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-28 11:18:27,056 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-28 11:18:27,057 [brute_force_agent_code] DEBUG: End of round: events occurred: INVALID_ACTION BOMB_EXPLODED CRATE_DESTROYED CRATE_DESTROYED CRATE_DESTROYED COIN_FOUND KILLED_SELF GOT_KILLED
+2024-08-28 11:18:27,061 [brute_force_agent_code] INFO: Q-table size after round: 3 entries
