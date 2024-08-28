@@ -154,6 +154,22 @@ def find_latest_checkpoint(checkpoint_dir,
     checkpoint_files.sort(key = os.path.getmtime)
     return checkpoint_files[-1]
 
+# Remember to implement a checkpoint!!
+# Especially since my laptop takes longer than 1 hour to run this
+def load_checkpoint(filepath):
+    # Saved checkpoint in case of crash
+    checkpoint = torch.load(filepath)
+    start_epoch = checkpoint['epoch']
+    w_h, w_h2, w_o = checkpoint['model_state_dict']
+    optimizer = RMSprop(params = [w_h, w_h2, w_o])
+    optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
+    train_loss = checkpoint['train_loss']
+    test_loss = checkpoint['test_loss']
+    train_accuracy = checkpoint['train_accuracy']
+    test_accuracy = checkpoint['test_accuracy']
+    return (start_epoch, w_h, w_h2, w_o, optimizer, 
+            train_loss, test_loss, train_accuracy, test_accuracy)
+
 # Can you load from checkpoint?
 checkpoint_dir = '.'
 latest_checkpoint = find_latest_checkpoint(checkpoint_dir)
@@ -212,6 +228,7 @@ for epoch in tqdm(range(start_epoch + 1, n_epochs + 1)):
         print(f"Mean Train Loss: {train_loss[-1]:.2e}")
         print(f"Train Accuracy: {train_accuracy[-1]:.2%}")
         test_loss_this_epoch = []
+        test_correct = 0
 
         # no need to compute gradients for validation
         with torch.no_grad():
@@ -241,7 +258,7 @@ for epoch in tqdm(range(start_epoch + 1, n_epochs + 1)):
             'test_loss': test_loss,
             'train_accuracy': train_accuracy,
             'test_accuracy': test_accuracy
-        }, f'checkpoint_dropout_epoch_{epoch}.pth')
+        }, f'checkpoint_intro_epoch_{epoch}.pth')
 
 ## Plots
 plt.figure()
