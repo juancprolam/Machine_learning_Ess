@@ -62,6 +62,7 @@ class Agent:
                 self.avatar = pygame.image.load(BytesIO(avatar_sprite_desc))
             else:
                 self.avatar = pygame.image.load(f'agent_code/{code_name}/avatar.png')
+                print("fail", code_name, self.avatar)
             assert self.avatar.get_size() == (30, 30)
         except Exception as e:
             self.avatar = pygame.image.load(s.ASSET_DIR / f'robot_{avatar_sprite_desc}.png')

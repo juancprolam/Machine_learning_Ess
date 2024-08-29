@@ -32,6 +32,7 @@ def setup(self):
             self.model = pickle.load(file)
 
 
+
 def act(self, game_state: dict) -> str:
     """
     Your agent should parse the input, think, and take a decision.
