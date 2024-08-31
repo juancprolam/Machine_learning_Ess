@@ -14,6 +14,9 @@ import torch.nn.functional as F
 import random
 from collections import deque
 
+# ReplayMemory
+from ReplayMemory import ReplayMemory
+
 
 """
 Test Agent Uno (Tau):
@@ -26,13 +29,23 @@ we will implement the following steps:
     Replay Memory: To store the Transitions our agent observes and reuse this data as part of the 
     training process.
 
+    This step is important to keep the Replay Memory of experiences (state, action, reward, next state)
+    buffered and then be able to sample from this memory buffer to train the agent. According to ChatGPT,
+    this helps "break the correlation between consecutive experiences and stabilizes the learning process"
+
+    The tools we require for this are:
+
+        deque: double-ended queue to append and pop items efficiently, used to store transitions with
+        a fixed maximum size REPLAY_MEMORY_SIZE. When the memory is full, old experiences are 
+        replaced with newer ones.
+
+        namedtuple: apparently the same as a tuple but with named fields for readability. This makes
+        the Transition = ('state', 'action', ...) clearer later on.
+
 
 """
-LEARNING_RATE = 1e-3
-DISCOUNT_FACTOR = 0.99
-BATCH_SIZE = 64
-REPLAY_MEMORY_SIZE = 10000
-TARGET_UPDATE_FREQ = 1000
+
+
 
 class DQN(nn.Module):
     def __init__(self, input_dim, layer_dims, output_dim); 
@@ -67,7 +80,128 @@ class DQN(nn.Module):
         
 
 def setup_training(self):
-    pass
+    # Initialize DQN Network
+    # Hyperparams
+    self.BATCH_SIZE = 128
+    self.DISCOUNT_FACTOR = 0.99
+    self.LEARNING_RATE = 1e-3
+    self.EPS_START = 0.9
+    self.EPS_END = 0.05
+    self.EPS_DECAY = 1000
+    self.REPLAY_MEMORY_SIZE = 10000
+    self.TARGET_UPDATE_FREQ = 1000
+
+    # n_actions = Number of actions from actions space
+    # n_observations = Number of state observations
+    # policy_net = Main network to select actions during training
+    # target_net = Network to compute stable target q-values, copy of policy_net 
+    #   but updated less frequently
+    # target_net.eval(): Evaluation mode ensure it's not updated during training
+    self.policy_net = DQN(self.n_observations, self.n_actions)#.to(self.device)
+    self.target_net = DQN(self.n_observations, self.n_actions)#.to(self.device)
+    self.target_net.load_state_dict(self.policy_net.state_dict())
+    self.target_net.eval()
+
+    # Initialize optimizer with AdamW
+    self.optimizer = optim.AdamW(policy_net.parameters, lr = self.LEARNING_RATE)
+
+    # Initialize ReplayMemory
+    memory = ReplayMemory(self.REPLAY_MEMORY_SIZE)
+
+    # Initialize counter
+    self.steps_done = 0
+    self.total_reward = 0
+    self.iterations_done = 0
+    self.training_durations = []
+
+    # Log
+    print("Training setup complete.")
+
+def select_action(self, state):
+    # Epsilon greedy policy, exponential decay
+    EPS_THRESHOLD = self.EPS_END + (self.EPS_START - self.EPS_END) * \
+    np.exp(- self.steps_done / self.EPS_DECAY)
+
+    self.steps_done += 1
+
+    # Select random action with p = EPS_THRESHOLD
+    if random.random() > EPS_THRESHOLD:
+        with torch.no_grad():
+            # Exploit
+            # Select action with highest q-value
+            return self.policy_net(state).max(1).indices.view(1, 1)
+    else:
+        # Explore
+        return torch.tensor([[random.randrange(self.action_spage)]], 
+        dytpe = torch.long)#, device = self.device)
+
+
+# We want to keep some logs and track some of the data
+episode_durations = []
+
+# set up matplotlib
+is_ipython = 'inline' in matplotlib.get_backend()
+if is_ipython:
+    from IPython import display
+
+plt.ion()
+
+def plot_durations(self, show_result = False):
+    plt.figure(1)
+
+    durations_t = torch.tensor(episode_durations, dtype = torch.float)
+    if show_result:
+        plt.title('Result')
+    else:
+        plt.clf()
+        plt.title('Training...')
+    plt.xlabel('Episode')
+    plt.ylabel('Duration')
+    plt.plot(durations_t.numpy())
+    
+    # Periodically plot the means over 100 episodes
+    if len(durations_t) >= 100:
+        means = durations_t.unfold(0, 100, 1).mean(1).view(-1)
+        means = torch.cat((torch.zeros(99), means))
+        plt.plot(means.numpy())
+
+    plt.pause(0.001) # For updates apparently
+    if is_python:
+        if not show_result:
+            display.display(plt.gcf())
+            display.clear_output(wait = True)
+        else:
+            display.display(plt.gcf())
+
+# Now to actually train our model with the optimization process
+def optimize_model(self, state):
+    if len(self.memory) < self.BATCH_SIZE:
+        return
+    
+    # Sample a random batch of transitions from Replay Memory
+    transitions = self.memory.sample(self.BATCH_SIZE)
+
+    # Convert: batch-array of transitions to transition of batch-arrays with
+    batch = Transition(*zip(*transitions))
+
+    # Compute non final mask and concatenate batch elements
+    non_final_mask = torch.tensor(tuple(map(lambda s: s is not None,
+        batch.next_state)), 
+        dytpe = torch.bool)#,device = self.device)
+    non_final_next_states = torch.cat([s for s in batch.next_state if s is not None])
+    state_batch = torch.cat(batch.state)
+    action_batch = torch.cat(batch.action)
+    reward_batch = torch.cat(batch_reward)
+
+    # Compute Q(state_t, action) according to our policy_net
+    state_action_values = self.policy_net(state_batch).gather(1, action_batch)
+
+    # Compute V(state_{t + 1}) for next states according to target_net, 
+    next_state_values = torch.zeros(self.BATCH_SIZE)#, device = self.device)
+    with torch.no_grad():
+        next_state_values[non_final_mask] = target_net(non_final_next_states)
+
+
 
 def game_events_occurred(self, old_game_state, self_action, new_game_state, events):
     pass

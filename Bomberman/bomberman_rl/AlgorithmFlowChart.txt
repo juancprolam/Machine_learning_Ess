@@ -10,10 +10,11 @@ bomberman_rl: python main.py play --my-agent brute_force_agent --train 1 --n-rou
 
     if training:
         self.backend_send_event("setup_training")
+        Init. Q-table
 
 5. Setup training: train.py -> setup_training()
 
-    Init. logging, Q-table
+    Init. logging
 
 6. Game loop: main.py -> world_controller() -> world.new_round()
 

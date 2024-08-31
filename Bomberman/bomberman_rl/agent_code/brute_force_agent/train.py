@@ -28,12 +28,11 @@ def setup_training(self):
 # Set the logger if it doesn't exist
     if not hasattr(self, 'logger'):
         self.logger = logging.getLogger('default_logger')
-        print("If not has attr, this will be printed")
+        print("If not has attr: 'logger', this will be printed")
 
     self.transitions = []
 
     # Keep track of training data for analysis later:
-    # 1. Define self here
     self.training_start_time = time.time() # Record start time
     self.training_start_timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S") # Record start timestamp
     self.round_counter = 0 # Initialize round counter
@@ -69,6 +68,8 @@ def game_events_occurred(self, old_game_state, self_action, new_game_state, even
     old_q_value = self.q_table[old_state][ACTIONS.index(self_action)]
     max_future_q = np.max(self.q_table[new_state])
     self.q_table[old_state][ACTIONS.index(self_action)] = old_q_value + LEARNING_RATE * (reward + DISCOUNT_FACTOR * max_future_q - old_q_value)
+
+def log_training_data(self, )
 
 def end_of_round(self, last_game_state, last_action, events):
     self.logger.debug(f"End of round: events occurred: {' '.join(map(str, events))}")
