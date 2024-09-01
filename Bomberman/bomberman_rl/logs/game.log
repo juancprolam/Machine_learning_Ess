@@ -1,284 +1,144 @@
-2024-08-28 11:18:17,257 [BombeRLeWorld] INFO: Initializing game world
-2024-08-28 11:18:17,775 [BombeRLeWorld] INFO: STARTING ROUND #1
-2024-08-28 11:18:17,950 [BombeRLeWorld] INFO: STARTING STEP 1
-2024-08-28 11:18:17,953 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:17,954 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:17,965 [BombeRLeWorld] INFO: STARTING STEP 2
-2024-08-28 11:18:17,966 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:17,966 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:18,091 [BombeRLeWorld] INFO: STARTING STEP 3
-2024-08-28 11:18:18,092 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:18,092 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:18,168 [BombeRLeWorld] INFO: STARTING STEP 4
-2024-08-28 11:18:18,169 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:18,169 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:18,265 [BombeRLeWorld] INFO: STARTING STEP 5
-2024-08-28 11:18:18,266 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:18,267 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:18,486 [BombeRLeWorld] INFO: STARTING STEP 6
-2024-08-28 11:18:18,488 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:18,488 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:18,504 [BombeRLeWorld] INFO: STARTING STEP 7
-2024-08-28 11:18:18,508 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:18,509 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:18,597 [BombeRLeWorld] INFO: STARTING STEP 8
-2024-08-28 11:18:18,597 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:18,597 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:18,699 [BombeRLeWorld] INFO: STARTING STEP 9
-2024-08-28 11:18:18,699 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:18,700 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:18,803 [BombeRLeWorld] INFO: STARTING STEP 10
-2024-08-28 11:18:18,804 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:18,804 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:18,904 [BombeRLeWorld] INFO: STARTING STEP 11
-2024-08-28 11:18:18,905 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:18,905 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:19,006 [BombeRLeWorld] INFO: STARTING STEP 12
-2024-08-28 11:18:19,007 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:19,007 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:19,106 [BombeRLeWorld] INFO: STARTING STEP 13
-2024-08-28 11:18:19,108 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:19,108 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:19,206 [BombeRLeWorld] INFO: STARTING STEP 14
-2024-08-28 11:18:19,207 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:19,207 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:19,308 [BombeRLeWorld] INFO: STARTING STEP 15
-2024-08-28 11:18:19,309 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:19,310 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:19,409 [BombeRLeWorld] INFO: STARTING STEP 16
-2024-08-28 11:18:19,410 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:19,410 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:19,506 [BombeRLeWorld] INFO: STARTING STEP 17
-2024-08-28 11:18:19,506 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:19,506 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:19,604 [BombeRLeWorld] INFO: STARTING STEP 18
-2024-08-28 11:18:19,604 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action WAIT in 0.00s.
-2024-08-28 11:18:19,604 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:19,711 [BombeRLeWorld] INFO: STARTING STEP 19
-2024-08-28 11:18:19,712 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:19,712 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:19,816 [BombeRLeWorld] INFO: STARTING STEP 20
-2024-08-28 11:18:19,817 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action WAIT in 0.00s.
-2024-08-28 11:18:19,817 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:19,913 [BombeRLeWorld] INFO: STARTING STEP 21
-2024-08-28 11:18:19,914 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:19,915 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:20,015 [BombeRLeWorld] INFO: STARTING STEP 22
-2024-08-28 11:18:20,016 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:20,016 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:20,116 [BombeRLeWorld] INFO: STARTING STEP 23
-2024-08-28 11:18:20,117 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:20,117 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:20,218 [BombeRLeWorld] INFO: STARTING STEP 24
-2024-08-28 11:18:20,219 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:20,219 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:20,318 [BombeRLeWorld] INFO: STARTING STEP 25
-2024-08-28 11:18:20,319 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:20,319 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:20,420 [BombeRLeWorld] INFO: STARTING STEP 26
-2024-08-28 11:18:20,421 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:20,421 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:20,520 [BombeRLeWorld] INFO: STARTING STEP 27
-2024-08-28 11:18:20,521 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:20,521 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:20,620 [BombeRLeWorld] INFO: STARTING STEP 28
-2024-08-28 11:18:20,621 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:20,621 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:20,722 [BombeRLeWorld] INFO: STARTING STEP 29
-2024-08-28 11:18:20,723 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:20,723 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:20,823 [BombeRLeWorld] INFO: STARTING STEP 30
-2024-08-28 11:18:20,824 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:20,824 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:20,922 [BombeRLeWorld] INFO: STARTING STEP 31
-2024-08-28 11:18:20,923 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:20,923 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:21,024 [BombeRLeWorld] INFO: STARTING STEP 32
-2024-08-28 11:18:21,025 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:21,025 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:21,124 [BombeRLeWorld] INFO: STARTING STEP 33
-2024-08-28 11:18:21,125 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action DOWN in 0.00s.
-2024-08-28 11:18:21,126 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:21,225 [BombeRLeWorld] INFO: STARTING STEP 34
-2024-08-28 11:18:21,226 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:21,226 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:21,327 [BombeRLeWorld] INFO: STARTING STEP 35
-2024-08-28 11:18:21,327 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:21,328 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:21,427 [BombeRLeWorld] INFO: STARTING STEP 36
-2024-08-28 11:18:21,427 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:21,427 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:21,529 [BombeRLeWorld] INFO: STARTING STEP 37
-2024-08-28 11:18:21,529 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:21,530 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:21,629 [BombeRLeWorld] INFO: STARTING STEP 38
-2024-08-28 11:18:21,631 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:21,631 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:21,729 [BombeRLeWorld] INFO: STARTING STEP 39
-2024-08-28 11:18:21,730 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:21,730 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:21,829 [BombeRLeWorld] INFO: STARTING STEP 40
-2024-08-28 11:18:21,830 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:21,830 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:21,929 [BombeRLeWorld] INFO: STARTING STEP 41
-2024-08-28 11:18:21,930 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:21,930 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:22,029 [BombeRLeWorld] INFO: STARTING STEP 42
-2024-08-28 11:18:22,030 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:22,030 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:22,131 [BombeRLeWorld] INFO: STARTING STEP 43
-2024-08-28 11:18:22,132 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:22,132 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:22,231 [BombeRLeWorld] INFO: STARTING STEP 44
-2024-08-28 11:18:22,233 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:22,233 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:22,336 [BombeRLeWorld] INFO: STARTING STEP 45
-2024-08-28 11:18:22,337 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:22,337 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:22,436 [BombeRLeWorld] INFO: STARTING STEP 46
-2024-08-28 11:18:22,437 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:22,437 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:22,536 [BombeRLeWorld] INFO: STARTING STEP 47
-2024-08-28 11:18:22,537 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:22,537 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:22,634 [BombeRLeWorld] INFO: STARTING STEP 48
-2024-08-28 11:18:22,634 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:22,635 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:22,737 [BombeRLeWorld] INFO: STARTING STEP 49
-2024-08-28 11:18:22,738 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:22,738 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:22,836 [BombeRLeWorld] INFO: STARTING STEP 50
-2024-08-28 11:18:22,837 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:22,837 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:22,936 [BombeRLeWorld] INFO: STARTING STEP 51
-2024-08-28 11:18:22,937 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:22,937 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:23,038 [BombeRLeWorld] INFO: STARTING STEP 52
-2024-08-28 11:18:23,039 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:23,040 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:23,139 [BombeRLeWorld] INFO: STARTING STEP 53
-2024-08-28 11:18:23,140 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:23,140 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:23,239 [BombeRLeWorld] INFO: STARTING STEP 54
-2024-08-28 11:18:23,240 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:23,240 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:23,338 [BombeRLeWorld] INFO: STARTING STEP 55
-2024-08-28 11:18:23,338 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:23,338 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:23,441 [BombeRLeWorld] INFO: STARTING STEP 56
-2024-08-28 11:18:23,442 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:23,442 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:23,542 [BombeRLeWorld] INFO: STARTING STEP 57
-2024-08-28 11:18:23,544 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:23,544 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:23,640 [BombeRLeWorld] INFO: STARTING STEP 58
-2024-08-28 11:18:23,641 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:23,641 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:23,740 [BombeRLeWorld] INFO: STARTING STEP 59
-2024-08-28 11:18:23,741 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:23,741 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:23,841 [BombeRLeWorld] INFO: STARTING STEP 60
-2024-08-28 11:18:23,843 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:23,843 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:23,943 [BombeRLeWorld] INFO: STARTING STEP 61
-2024-08-28 11:18:23,944 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:23,944 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:24,045 [BombeRLeWorld] INFO: STARTING STEP 62
-2024-08-28 11:18:24,046 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:24,046 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:24,142 [BombeRLeWorld] INFO: STARTING STEP 63
-2024-08-28 11:18:24,143 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:24,143 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:24,243 [BombeRLeWorld] INFO: STARTING STEP 64
-2024-08-28 11:18:24,244 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:24,244 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:24,342 [BombeRLeWorld] INFO: STARTING STEP 65
-2024-08-28 11:18:24,342 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:24,342 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:24,443 [BombeRLeWorld] INFO: STARTING STEP 66
-2024-08-28 11:18:24,444 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:24,444 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:24,544 [BombeRLeWorld] INFO: STARTING STEP 67
-2024-08-28 11:18:24,545 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action DOWN in 0.00s.
-2024-08-28 11:18:24,545 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:24,647 [BombeRLeWorld] INFO: STARTING STEP 68
-2024-08-28 11:18:24,648 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:24,648 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:24,749 [BombeRLeWorld] INFO: STARTING STEP 69
-2024-08-28 11:18:24,750 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:24,750 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:24,849 [BombeRLeWorld] INFO: STARTING STEP 70
-2024-08-28 11:18:24,849 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:24,850 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:24,952 [BombeRLeWorld] INFO: STARTING STEP 71
-2024-08-28 11:18:24,953 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:24,953 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:25,049 [BombeRLeWorld] INFO: STARTING STEP 72
-2024-08-28 11:18:25,050 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:25,050 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:25,152 [BombeRLeWorld] INFO: STARTING STEP 73
-2024-08-28 11:18:25,153 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:25,153 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:25,250 [BombeRLeWorld] INFO: STARTING STEP 74
-2024-08-28 11:18:25,251 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:25,251 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:25,349 [BombeRLeWorld] INFO: STARTING STEP 75
-2024-08-28 11:18:25,350 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action WAIT in 0.00s.
-2024-08-28 11:18:25,350 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:25,447 [BombeRLeWorld] INFO: STARTING STEP 76
-2024-08-28 11:18:25,447 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:25,448 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:25,547 [BombeRLeWorld] INFO: STARTING STEP 77
-2024-08-28 11:18:25,547 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:25,547 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:25,649 [BombeRLeWorld] INFO: STARTING STEP 78
-2024-08-28 11:18:25,650 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:25,650 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:25,751 [BombeRLeWorld] INFO: STARTING STEP 79
-2024-08-28 11:18:25,751 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:25,752 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:25,849 [BombeRLeWorld] INFO: STARTING STEP 80
-2024-08-28 11:18:25,850 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:25,851 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:25,950 [BombeRLeWorld] INFO: STARTING STEP 81
-2024-08-28 11:18:25,951 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:25,951 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:26,050 [BombeRLeWorld] INFO: STARTING STEP 82
-2024-08-28 11:18:26,051 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:26,051 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:26,151 [BombeRLeWorld] INFO: STARTING STEP 83
-2024-08-28 11:18:26,152 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:26,152 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:26,256 [BombeRLeWorld] INFO: STARTING STEP 84
-2024-08-28 11:18:26,257 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:26,257 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:26,350 [BombeRLeWorld] INFO: STARTING STEP 85
-2024-08-28 11:18:26,351 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:26,351 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:26,457 [BombeRLeWorld] INFO: STARTING STEP 86
-2024-08-28 11:18:26,459 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:26,459 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:26,558 [BombeRLeWorld] INFO: STARTING STEP 87
-2024-08-28 11:18:26,559 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:26,559 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:26,654 [BombeRLeWorld] INFO: STARTING STEP 88
-2024-08-28 11:18:26,655 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action BOMB in 0.00s.
-2024-08-28 11:18:26,655 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:26,656 [BombeRLeWorld] INFO: Agent <brute_force_agent> drops bomb at (1, 1)
-2024-08-28 11:18:26,755 [BombeRLeWorld] INFO: STARTING STEP 89
-2024-08-28 11:18:26,756 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:26,756 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:26,855 [BombeRLeWorld] INFO: STARTING STEP 90
-2024-08-28 11:18:26,856 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:26,856 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:26,953 [BombeRLeWorld] INFO: STARTING STEP 91
-2024-08-28 11:18:26,954 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:26,954 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:27,056 [BombeRLeWorld] INFO: STARTING STEP 92
-2024-08-28 11:18:27,057 [BombeRLeWorld] INFO: Agent <brute_force_agent> chose action UP in 0.00s.
-2024-08-28 11:18:27,057 [BombeRLeWorld] INFO: Agent <brute_force_agent> stayed within acceptable think time.
-2024-08-28 11:18:27,057 [BombeRLeWorld] INFO: Agent <brute_force_agent>'s bomb at (1, 1) explodes
-2024-08-28 11:18:27,057 [BombeRLeWorld] INFO: Coin found at (1, 3)
-2024-08-28 11:18:27,057 [BombeRLeWorld] INFO: Agent <brute_force_agent> blown up by own bomb
-2024-08-28 11:18:27,057 [BombeRLeWorld] INFO: No agent left alive, wrap up round
-2024-08-28 11:18:27,057 [BombeRLeWorld] INFO: WRAPPING UP ROUND #1
+2024-09-01 12:46:48,321 [BombeRLeWorld] INFO: Initializing game world
+2024-09-01 12:46:48,440 [BombeRLeWorld] INFO: STARTING ROUND #1
+2024-09-01 12:46:48,460 [BombeRLeWorld] INFO: STARTING STEP 1
+2024-09-01 12:46:48,461 [BombeRLeWorld] INFO: Agent <first_agent> chose action UP in 0.00s.
+2024-09-01 12:46:48,461 [BombeRLeWorld] INFO: Agent <first_agent> stayed within acceptable think time.
+2024-09-01 12:46:48,462 [BombeRLeWorld] INFO: Agent <first_agent> picked up coin at (1, 1) and receives 1 point
+2024-09-01 12:46:48,548 [BombeRLeWorld] INFO: STARTING STEP 2
+2024-09-01 12:46:48,548 [BombeRLeWorld] INFO: Agent <first_agent> chose action DOWN in 0.00s.
+2024-09-01 12:46:48,548 [BombeRLeWorld] INFO: Agent <first_agent> stayed within acceptable think time.
+2024-09-01 12:46:48,549 [BombeRLeWorld] INFO: Agent <first_agent> picked up coin at (1, 2) and receives 1 point
+2024-09-01 12:46:48,656 [BombeRLeWorld] INFO: STARTING STEP 3
+2024-09-01 12:46:48,657 [BombeRLeWorld] INFO: Agent <first_agent> chose action DOWN in 0.00s.
+2024-09-01 12:46:48,658 [BombeRLeWorld] INFO: Agent <first_agent> stayed within acceptable think time.
+2024-09-01 12:46:48,755 [BombeRLeWorld] INFO: STARTING STEP 4
+2024-09-01 12:46:48,757 [BombeRLeWorld] INFO: Agent <first_agent> chose action DOWN in 0.00s.
+2024-09-01 12:46:48,757 [BombeRLeWorld] INFO: Agent <first_agent> stayed within acceptable think time.
+2024-09-01 12:46:48,856 [BombeRLeWorld] INFO: STARTING STEP 5
+2024-09-01 12:46:48,857 [BombeRLeWorld] INFO: Agent <first_agent> chose action DOWN in 0.00s.
+2024-09-01 12:46:48,858 [BombeRLeWorld] INFO: Agent <first_agent> stayed within acceptable think time.
+2024-09-01 12:46:48,858 [BombeRLeWorld] INFO: Agent <first_agent> picked up coin at (1, 5) and receives 1 point
+2024-09-01 12:46:48,953 [BombeRLeWorld] INFO: STARTING STEP 6
+2024-09-01 12:46:48,953 [BombeRLeWorld] INFO: Agent <first_agent> chose action DOWN in 0.00s.
+2024-09-01 12:46:48,955 [BombeRLeWorld] INFO: Agent <first_agent> stayed within acceptable think time.
+2024-09-01 12:46:48,955 [BombeRLeWorld] INFO: Agent <first_agent> picked up coin at (1, 6) and receives 1 point
+2024-09-01 12:46:49,052 [BombeRLeWorld] INFO: STARTING STEP 7
+2024-09-01 12:46:49,053 [BombeRLeWorld] INFO: Agent <first_agent> chose action DOWN in 0.00s.
+2024-09-01 12:46:49,053 [BombeRLeWorld] INFO: Agent <first_agent> stayed within acceptable think time.
+2024-09-01 12:46:49,160 [BombeRLeWorld] INFO: STARTING STEP 8
+2024-09-01 12:46:49,161 [BombeRLeWorld] INFO: Agent <first_agent> chose action DOWN in 0.00s.
+2024-09-01 12:46:49,161 [BombeRLeWorld] INFO: Agent <first_agent> stayed within acceptable think time.
+2024-09-01 12:46:49,262 [BombeRLeWorld] INFO: STARTING STEP 9
+2024-09-01 12:46:49,263 [BombeRLeWorld] INFO: Agent <first_agent> chose action UP in 0.00s.
+2024-09-01 12:46:49,263 [BombeRLeWorld] INFO: Agent <first_agent> stayed within acceptable think time.
+2024-09-01 12:46:49,360 [BombeRLeWorld] INFO: STARTING STEP 10
+2024-09-01 12:46:49,361 [BombeRLeWorld] INFO: Agent <first_agent> chose action DOWN in 0.00s.
+2024-09-01 12:46:49,361 [BombeRLeWorld] INFO: Agent <first_agent> stayed within acceptable think time.
+2024-09-01 12:46:49,463 [BombeRLeWorld] INFO: STARTING STEP 11
+2024-09-01 12:46:49,465 [BombeRLeWorld] INFO: Agent <first_agent> chose action UP in 0.00s.
+2024-09-01 12:46:49,465 [BombeRLeWorld] INFO: Agent <first_agent> stayed within acceptable think time.
+2024-09-01 12:46:49,564 [BombeRLeWorld] INFO: STARTING STEP 12
+2024-09-01 12:46:49,565 [BombeRLeWorld] INFO: Agent <first_agent> chose action DOWN in 0.00s.
+2024-09-01 12:46:49,565 [BombeRLeWorld] INFO: Agent <first_agent> stayed within acceptable think time.
+2024-09-01 12:46:49,666 [BombeRLeWorld] INFO: STARTING STEP 13
+2024-09-01 12:46:49,668 [BombeRLeWorld] INFO: Agent <first_agent> chose action UP in 0.00s.
+2024-09-01 12:46:49,668 [BombeRLeWorld] INFO: Agent <first_agent> stayed within acceptable think time.
+2024-09-01 12:46:49,765 [BombeRLeWorld] INFO: STARTING STEP 14
+2024-09-01 12:46:49,766 [BombeRLeWorld] INFO: Agent <first_agent> chose action DOWN in 0.00s.
+2024-09-01 12:46:49,767 [BombeRLeWorld] INFO: Agent <first_agent> stayed within acceptable think time.
+2024-09-01 12:46:49,867 [BombeRLeWorld] INFO: STARTING STEP 15
+2024-09-01 12:46:49,868 [BombeRLeWorld] INFO: Agent <first_agent> chose action UP in 0.00s.
+2024-09-01 12:46:49,869 [BombeRLeWorld] INFO: Agent <first_agent> stayed within acceptable think time.
+2024-09-01 12:46:49,969 [BombeRLeWorld] INFO: STARTING STEP 16
+2024-09-01 12:46:49,970 [BombeRLeWorld] INFO: Agent <first_agent> chose action DOWN in 0.00s.
+2024-09-01 12:46:49,971 [BombeRLeWorld] INFO: Agent <first_agent> stayed within acceptable think time.
+2024-09-01 12:46:50,069 [BombeRLeWorld] INFO: STARTING STEP 17
+2024-09-01 12:46:50,071 [BombeRLeWorld] INFO: Agent <first_agent> chose action UP in 0.00s.
+2024-09-01 12:46:50,071 [BombeRLeWorld] INFO: Agent <first_agent> stayed within acceptable think time.
+2024-09-01 12:46:50,167 [BombeRLeWorld] INFO: STARTING STEP 18
+2024-09-01 12:46:50,168 [BombeRLeWorld] INFO: Agent <first_agent> chose action DOWN in 0.00s.
+2024-09-01 12:46:50,168 [BombeRLeWorld] INFO: Agent <first_agent> stayed within acceptable think time.
+2024-09-01 12:46:50,270 [BombeRLeWorld] INFO: STARTING STEP 19
+2024-09-01 12:46:50,272 [BombeRLeWorld] INFO: Agent <first_agent> chose action UP in 0.00s.
+2024-09-01 12:46:50,272 [BombeRLeWorld] INFO: Agent <first_agent> stayed within acceptable think time.
+2024-09-01 12:46:50,372 [BombeRLeWorld] INFO: STARTING STEP 20
+2024-09-01 12:46:50,373 [BombeRLeWorld] INFO: Agent <first_agent> chose action DOWN in 0.00s.
+2024-09-01 12:46:50,373 [BombeRLeWorld] INFO: Agent <first_agent> stayed within acceptable think time.
+2024-09-01 12:46:50,472 [BombeRLeWorld] INFO: STARTING STEP 21
+2024-09-01 12:46:50,473 [BombeRLeWorld] INFO: Agent <first_agent> chose action UP in 0.00s.
+2024-09-01 12:46:50,473 [BombeRLeWorld] INFO: Agent <first_agent> stayed within acceptable think time.
+2024-09-01 12:46:50,573 [BombeRLeWorld] INFO: STARTING STEP 22
+2024-09-01 12:46:50,575 [BombeRLeWorld] INFO: Agent <first_agent> chose action DOWN in 0.00s.
+2024-09-01 12:46:50,575 [BombeRLeWorld] INFO: Agent <first_agent> stayed within acceptable think time.
+2024-09-01 12:46:50,673 [BombeRLeWorld] INFO: STARTING STEP 23
+2024-09-01 12:46:50,676 [BombeRLeWorld] INFO: Agent <first_agent> chose action UP in 0.00s.
+2024-09-01 12:46:50,676 [BombeRLeWorld] INFO: Agent <first_agent> stayed within acceptable think time.
+2024-09-01 12:46:50,776 [BombeRLeWorld] INFO: STARTING STEP 24
+2024-09-01 12:46:50,777 [BombeRLeWorld] INFO: Agent <first_agent> chose action DOWN in 0.00s.
+2024-09-01 12:46:50,777 [BombeRLeWorld] INFO: Agent <first_agent> stayed within acceptable think time.
+2024-09-01 12:46:50,877 [BombeRLeWorld] INFO: STARTING STEP 25
+2024-09-01 12:46:50,878 [BombeRLeWorld] INFO: Agent <first_agent> chose action UP in 0.00s.
+2024-09-01 12:46:50,878 [BombeRLeWorld] INFO: Agent <first_agent> stayed within acceptable think time.
+2024-09-01 12:46:50,977 [BombeRLeWorld] INFO: STARTING STEP 26
+2024-09-01 12:46:50,978 [BombeRLeWorld] INFO: Agent <first_agent> chose action DOWN in 0.00s.
+2024-09-01 12:46:50,978 [BombeRLeWorld] INFO: Agent <first_agent> stayed within acceptable think time.
+2024-09-01 12:46:51,078 [BombeRLeWorld] INFO: STARTING STEP 27
+2024-09-01 12:46:51,079 [BombeRLeWorld] INFO: Agent <first_agent> chose action UP in 0.00s.
+2024-09-01 12:46:51,079 [BombeRLeWorld] INFO: Agent <first_agent> stayed within acceptable think time.
+2024-09-01 12:46:51,173 [BombeRLeWorld] INFO: STARTING STEP 28
+2024-09-01 12:46:51,174 [BombeRLeWorld] INFO: Agent <first_agent> chose action DOWN in 0.00s.
+2024-09-01 12:46:51,174 [BombeRLeWorld] INFO: Agent <first_agent> stayed within acceptable think time.
+2024-09-01 12:46:51,272 [BombeRLeWorld] INFO: STARTING STEP 29
+2024-09-01 12:46:51,273 [BombeRLeWorld] INFO: Agent <first_agent> chose action UP in 0.00s.
+2024-09-01 12:46:51,273 [BombeRLeWorld] INFO: Agent <first_agent> stayed within acceptable think time.
+2024-09-01 12:46:51,380 [BombeRLeWorld] INFO: STARTING STEP 30
+2024-09-01 12:46:51,382 [BombeRLeWorld] INFO: Agent <first_agent> chose action DOWN in 0.00s.
+2024-09-01 12:46:51,382 [BombeRLeWorld] INFO: Agent <first_agent> stayed within acceptable think time.
+2024-09-01 12:46:51,481 [BombeRLeWorld] INFO: STARTING STEP 31
+2024-09-01 12:46:51,482 [BombeRLeWorld] INFO: Agent <first_agent> chose action UP in 0.00s.
+2024-09-01 12:46:51,483 [BombeRLeWorld] INFO: Agent <first_agent> stayed within acceptable think time.
+2024-09-01 12:46:51,582 [BombeRLeWorld] INFO: STARTING STEP 32
+2024-09-01 12:46:51,583 [BombeRLeWorld] INFO: Agent <first_agent> chose action DOWN in 0.00s.
+2024-09-01 12:46:51,584 [BombeRLeWorld] INFO: Agent <first_agent> stayed within acceptable think time.
+2024-09-01 12:46:51,683 [BombeRLeWorld] INFO: STARTING STEP 33
+2024-09-01 12:46:51,684 [BombeRLeWorld] INFO: Agent <first_agent> chose action UP in 0.00s.
+2024-09-01 12:46:51,684 [BombeRLeWorld] INFO: Agent <first_agent> stayed within acceptable think time.
+2024-09-01 12:46:51,783 [BombeRLeWorld] INFO: STARTING STEP 34
+2024-09-01 12:46:51,785 [BombeRLeWorld] INFO: Agent <first_agent> chose action DOWN in 0.00s.
+2024-09-01 12:46:51,785 [BombeRLeWorld] INFO: Agent <first_agent> stayed within acceptable think time.
+2024-09-01 12:46:51,875 [BombeRLeWorld] INFO: STARTING STEP 35
+2024-09-01 12:46:51,877 [BombeRLeWorld] INFO: Agent <first_agent> chose action UP in 0.00s.
+2024-09-01 12:46:51,877 [BombeRLeWorld] INFO: Agent <first_agent> stayed within acceptable think time.
+2024-09-01 12:46:51,976 [BombeRLeWorld] INFO: STARTING STEP 36
+2024-09-01 12:46:51,977 [BombeRLeWorld] INFO: Agent <first_agent> chose action DOWN in 0.00s.
+2024-09-01 12:46:51,977 [BombeRLeWorld] INFO: Agent <first_agent> stayed within acceptable think time.
+2024-09-01 12:46:52,084 [BombeRLeWorld] INFO: STARTING STEP 37
+2024-09-01 12:46:52,085 [BombeRLeWorld] INFO: Agent <first_agent> chose action UP in 0.00s.
+2024-09-01 12:46:52,085 [BombeRLeWorld] INFO: Agent <first_agent> stayed within acceptable think time.
+2024-09-01 12:46:52,189 [BombeRLeWorld] INFO: STARTING STEP 38
+2024-09-01 12:46:52,190 [BombeRLeWorld] INFO: Agent <first_agent> chose action DOWN in 0.00s.
+2024-09-01 12:46:52,190 [BombeRLeWorld] INFO: Agent <first_agent> stayed within acceptable think time.
+2024-09-01 12:46:52,286 [BombeRLeWorld] INFO: STARTING STEP 39
+2024-09-01 12:46:52,287 [BombeRLeWorld] INFO: Agent <first_agent> chose action UP in 0.00s.
+2024-09-01 12:46:52,287 [BombeRLeWorld] INFO: Agent <first_agent> stayed within acceptable think time.
+2024-09-01 12:46:52,383 [BombeRLeWorld] INFO: STARTING STEP 40
+2024-09-01 12:46:52,383 [BombeRLeWorld] INFO: Agent <first_agent> chose action DOWN in 0.00s.
+2024-09-01 12:46:52,384 [BombeRLeWorld] INFO: Agent <first_agent> stayed within acceptable think time.
+2024-09-01 12:46:52,491 [BombeRLeWorld] INFO: STARTING STEP 41
+2024-09-01 12:46:52,492 [BombeRLeWorld] INFO: Agent <first_agent> chose action UP in 0.00s.
+2024-09-01 12:46:52,492 [BombeRLeWorld] INFO: Agent <first_agent> stayed within acceptable think time.
+2024-09-01 12:46:52,590 [BombeRLeWorld] INFO: STARTING STEP 42
+2024-09-01 12:46:52,591 [BombeRLeWorld] INFO: Agent <first_agent> chose action DOWN in 0.00s.
+2024-09-01 12:46:52,591 [BombeRLeWorld] INFO: Agent <first_agent> stayed within acceptable think time.
+2024-09-01 12:46:52,683 [BombeRLeWorld] INFO: STARTING STEP 43
+2024-09-01 12:46:52,683 [BombeRLeWorld] INFO: Agent <first_agent> chose action UP in 0.00s.
+2024-09-01 12:46:52,685 [BombeRLeWorld] INFO: Agent <first_agent> stayed within acceptable think time.
+2024-09-01 12:46:52,794 [BombeRLeWorld] INFO: STARTING STEP 44
+2024-09-01 12:46:52,796 [BombeRLeWorld] INFO: Agent <first_agent> chose action DOWN in 0.00s.
+2024-09-01 12:46:52,796 [BombeRLeWorld] INFO: Agent <first_agent> stayed within acceptable think time.
+2024-09-01 12:46:52,891 [BombeRLeWorld] INFO: STARTING STEP 45
+2024-09-01 12:46:52,892 [BombeRLeWorld] INFO: Agent <first_agent> chose action UP in 0.00s.
+2024-09-01 12:46:52,892 [BombeRLeWorld] INFO: Agent <first_agent> stayed within acceptable think time.
+2024-09-01 12:46:52,993 [BombeRLeWorld] INFO: STARTING STEP 46
+2024-09-01 12:46:52,995 [BombeRLeWorld] INFO: Agent <first_agent> chose action DOWN in 0.00s.
+2024-09-01 12:46:52,995 [BombeRLeWorld] INFO: Agent <first_agent> stayed within acceptable think time.
