@@ -5,10 +5,22 @@ import time
 import os
 from datetime import datetime
 
+import csv
+import time
+import sys
+import argparse
+
 from .callbacks import state_to_features, ACTIONS
 
 LEARNING_RATE = 0.1
 DISCOUNT_FACTOR = 0.99
+
+# get n-rounds from command line without modifying main.py
+def get_n_rounds_from_args():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--n-rounds", type=int, default=1, help="Number of rounds to play")
+    args, _ = parser.parse_known_args(sys.argv)
+    return args.n_rounds
 
 
 def setup_training(self):
@@ -19,23 +31,32 @@ def setup_training(self):
 
     :param self: This object is passed to all callbacks and you can set arbitrary values.
     """
-    # Set the logger if it doesn't exist
-    if not hasattr(self, 'logger'):
-        self.logger = logging.getLogger('default_logger')
-        print("If not has attr, this will be printed")
+    # Parse n-rounds from command-line arguments
+    self.total_rounds = get_n_rounds_from_args()
 
-    self.transitions = []
+    # Initialize tally for events and actions:
+    self.event_names = [getattr(e, name) for name in dir(e) if not name.startswith("__")]
+    self.event_count = {event: 0 for event in self.event_names}
+    self.action_count = {action: 0 for action in ['UP', 'DOWN', 'LEFT', 'RIGHT', 'WAIT', 'BOMB']}
 
-    # Keep track of training data for analysis later:
-    # 1. Define self here
-    self.training_start_time = time.time() # Record start time
-    self.training_start_timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S") # Record start timestamp
-    self.round_counter = 0 # Initialize round counter
+    # Initialize round counter and timer
+    self.round_counter = 0
+    self.training_start_time = time.time()
+
+    # Initialize score and reward trackers
+    self.total_score = 0
     self.total_reward = 0
-    self.event_log = [] # Log events
 
-    # Action counter
-    self.action_counts = {action: 0 for action in ACTIONS}
+    # Create or open the CSV file to log statistics
+    self.csv_file = 'training_stats.csv'
+    file_exists = os.path.isfile(self.csv_file)
+    with open(self.csv_file, mode='a', newline='') as file:
+        writer = csv.writer(file)
+        if not file_exists:
+            # Write headers only if the file doesn't exist
+            headers = ['Start Timestamp', 'Elapsed Time (s)', 'Rounds Played', 'Score', 'Total Reward'] + self.event_names + list(self.action_count.keys())
+            writer.writerow(headers)
+            
 
 
 def game_events_occurred(self, old_game_state, self_action, new_game_state, events):
@@ -57,7 +78,33 @@ def game_events_occurred(self, old_game_state, self_action, new_game_state, even
     """
     self.logger.debug(f'Encountered game event(s) {", ".join(map(repr, events))} in step {new_game_state["step"]}')
     
-    self.action_counts[self_action] += 1
+    # Track statistics
+    # Ensure total_score and total_reward are initialized
+    if not hasattr(self, 'total_score'):
+        self.total_score = 0
+
+    if not hasattr(self, 'total_reward'):
+        self.total_reward = 0
+
+    # Update the score from the game state
+    self.total_score = new_game_state["self"][1]
+
+    # Count events
+    for event in events:
+        if event in self.event_count:
+            self.event_count[event] += 1
+
+    # Count actions
+    if self_action in self.action_count:
+        self.action_count[self_action] += 1
+
+    # Calculate rewards and accumulate them
+    reward = reward_from_events(self, events)
+    self.total_reward += reward
+
+
+
+    # Q-update
 
     if old_game_state is None or new_game_state is None:
         return
@@ -65,12 +112,6 @@ def game_events_occurred(self, old_game_state, self_action, new_game_state, even
     old_features = state_to_features(old_game_state)
     new_features = state_to_features(new_game_state)
 
-    reward = reward_from_events(events)
-    self.total_reward += reward
-
-    self.event_log.extend(events)
-
-    # Q-update
     if old_features not in self.q_table:
         self.q_table[old_features] = np.zeros(len(ACTIONS))
     if new_features not in self.q_table:
@@ -95,10 +136,30 @@ def end_of_round(self, last_game_state, last_action, events):
     :param self: The same object that is passed to all of your callbacks.
     """
     self.logger.debug(f"End of round: events occurred: {' '.join(map(str, events))}")
-    last_state = state_to_features(last_game_state)
-    reward = reward_from_events(events)
-    # Track total reward
+    
+    # Statistics
+    # Increment round counter
+    self.round_counter += 1
+
+    # Set total_rounds if not already set (e.g., passed in from main.py)
+    if self.total_rounds is None:
+        self.total_rounds = self.round_counter  # Default to current round count if not set elsewhere
+
+    # Update the score from the last game state
+    self.total_score = last_game_state["self"][1]
+
+    # Calculate rewards and accumulate them
+    reward = reward_from_events(self, events)
     self.total_reward += reward
+
+    # Count final events
+    for event in events:
+        if event in self.event_count:
+            self.event_count[event] += 1
+
+
+    # Q-update
+    last_state = state_to_features(last_game_state)
 
     if last_state not in self.q_table:
         self.q_table[last_state] = np.zeros(len(ACTIONS))
@@ -112,13 +173,33 @@ def end_of_round(self, last_game_state, last_action, events):
     # Q-table size
     self.logger.info(f"Q-table size after round: {len(self.q_table)} entries")
 
-    # Track statistics
-    # Round counter
-    self.round_counter += 1
-    self.event_log.extend(events)
+    # Check if this was the last round
+    if self.round_counter >= self.total_rounds:
+        end_of_training(self)
+
+def end_of_training(self):
+    """
+    Called at the end of all rounds to log the cumulative statistics.
+    """
+    # Calculate elapsed time
+    elapsed_time = time.time() - self.training_start_time
+
+    # Log the accumulated statistics to the CSV file
+    with open(self.csv_file, mode='a', newline='') as file:
+        writer = csv.writer(file)
+        row = [time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(self.training_start_time)), 
+               elapsed_time, self.round_counter, self.total_score, self.total_reward]
+        
+        # Append event counts
+        row += [self.event_count[event] for event in self.event_names]
+        
+        # Append action counts
+        row += [self.action_count[action] for action in self.action_count]
+
+        writer.writerow(row)
 
 
-def reward_from_events(events) -> int:
+def reward_from_events(self, events) -> int:
     """
     *This is not a required function, but an idea to structure your code.*
 
