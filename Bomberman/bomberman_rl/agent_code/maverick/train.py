@@ -120,15 +120,3 @@ def end_of_round(self, last_game_state: dict, last_action: str, events: List[str
 
     if e.SURVIVED_ROUND in events:
         self.logger.info("Runde überlebt!")
-
-
-
-
-
-    
-    
-
-        
-
-
-

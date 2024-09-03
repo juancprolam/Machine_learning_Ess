@@ -220,4 +220,3 @@ def track_game_score(self, smooth=False):
     except:
         ...
     plt.close()
-
