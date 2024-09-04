@@ -1,4 +1,5 @@
-test/
+Bomberman/bomberman_rl/__pycache__/
+
 *.log
 *log
 *.pyc
