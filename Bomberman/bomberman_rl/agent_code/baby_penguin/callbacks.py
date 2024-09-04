@@ -6,7 +6,7 @@ import numpy as np
 
 
 ACTIONS = ['UP', 'RIGHT', 'DOWN', 'LEFT', 'WAIT', 'BOMB']
-
+EPSILON = 0.15
 
 def setup(self):
     """
@@ -18,19 +18,23 @@ def setup(self):
     with other students, without revealing your training code.
 
     In this example, our model is a set of probabilities over actions
-    that are is independent of the game state.
+    that are is independent of the game features.
 
     :param self: This object is passed to all callbacks and you can set arbitrary values.
     """
-    if self.train or not os.path.isfile("my-saved-model.pt"):
-        self.logger.info("Setting up model from scratch.")
-        weights = np.random.rand(len(ACTIONS))
-        self.model = weights / weights.sum()
-    else:
-        self.logger.info("Loading model from saved state.")
-        with open("my-saved-model.pt", "rb") as file:
-            self.model = pickle.load(file)
+    
+    # Initialize with tracker info
+    self.round_counter = 0
+    self.n_rounds = getattr(self, 'n_rounds', None)
 
+    # Q-table
+    if self.train and not os.path.isfile("q_table.pkl"):
+        self.logger.info("Setting up Q-table from scratch")
+        self.q_table = {}
+    else:
+        self.logger.info("Loading Q-table from saved features.")
+        with open("q_table.pkl", "rb") as file:
+            self.q_table = pickle.load(file)
 
 
 def act(self, game_state: dict) -> str:
@@ -42,18 +46,21 @@ def act(self, game_state: dict) -> str:
     :param game_state: The dictionary that describes everything on the board.
     :return: The action to take as a string.
     """
-    # todo Exploration vs exploitation
-    random_prob = .1
-    if self.train and random.random() < random_prob:
+    features = state_to_features(game_state)
+
+    # Explore
+    if self.train and np.random.rand() < EPSILON:
         self.logger.debug("Choosing action purely at random.")
-        # 80%: walk in any direction. 10% wait. 10% bomb.
-        return np.random.choice(ACTIONS, p=[.2, .2, .2, .2, .1, .1])
+        return np.random.choice(ACTIONS)
 
-    self.logger.debug("Querying model for action.")
-    return np.random.choice(ACTIONS, p=self.model)
+    # Exploit
+    self.logger.debug("Choosing action based on Q-table")
+    if features not in self.q_table:
+        self.q_table[features] = np.zeros(len(ACTIONS))
 
+    return ACTIONS[np.argmax(self.q_table[features])]
 
-def state_to_features(game_state: dict) -> np.array:
+def state_to_features(game_state: dict) -> tuple:
     """
     *This is not a required function, but an idea to structure your code.*
 
@@ -67,14 +74,25 @@ def state_to_features(game_state: dict) -> np.array:
     :param game_state:  A dictionary describing the current game board.
     :return: np.array
     """
-    # This is the dict before the game begins and after it ends
     if game_state is None:
         return None
+    else:
+        game_map = game_state['field']
 
-    # For example, you could construct several channels of equal shape, ...
-    channels = []
-    channels.append(...)
-    # concatenate them as a feature tensor (they must have the same shape), ...
-    stacked_channels = np.stack(channels)
-    # and return them as a vector
-    return stacked_channels.reshape(-1)
+        def nearby_fields(position):
+            up = game_map[position[0]+1,position[1]]
+            down = game_map[position[0]-1,position[1]]
+            left = game_map[position[0],position[1]-1]
+            right = game_map[position[0],position[1]+1]
+
+            return(up,down,left,right)
+        
+        score = game_state['self'][1]
+        coins = game_state['coins']
+        own_position = game_state['self'][3]
+        agent_nearby_fields = nearby_fields(own_position)
+        nearest_coin_dist = min([abs(coin[0] - own_position[0]) + abs(coin[1] - own_position[1]) for coin in coins]) if coins else 0
+
+        return(own_position[0],own_position[1],agent_nearby_fields[0],agent_nearby_fields[1],agent_nearby_fields[2],agent_nearby_fields[3],score,nearest_coin_dist)
+    
+    
