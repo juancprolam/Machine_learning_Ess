@@ -1,0 +1,13 @@
+2024-08-31 14:19:47,959 [maverick_code] INFO: Lade Model 'final_parameters'.
+2024-08-31 14:19:48,078 [maverick_wrapper] ERROR: index 9 is out of bounds for axis 0 with size 9
+Traceback (most recent call last):
+  File "C:\Users\vevol\Machine Learning\Machine_learning_Ess-1\Bomberman\bomberman_rl\agents.py", line 248, in process_event
+    event_result = getattr(module, event_name)(self.fake_self, *event_args)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vevol\Machine Learning\Machine_learning_Ess-1\Bomberman\bomberman_rl\agent_code\maverick\callbacks.py", line 63, in act
+    features = state_to_features(self, game_state)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vevol\Machine Learning\Machine_learning_Ess-1\Bomberman\bomberman_rl\agent_code\maverick\ManagerFeatures.py", line 314, in state_to_features
+    coin_distances_after_step[direction][int(number_of_found_coins[direction])] = distance
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IndexError: index 9 is out of bounds for axis 0 with size 9

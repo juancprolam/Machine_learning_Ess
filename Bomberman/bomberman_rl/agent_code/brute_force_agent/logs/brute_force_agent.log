@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2024-08-28 12:26:17,835 [brute_force_agent_code] INFO: Loading Q-table from saved state.
 2024-08-28 12:26:21,215 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
 2024-08-28 12:26:21,235 [brute_force_agent_code] DEBUG: Events occurred: MOVED_UP
@@ -1087,3 +1088,49 @@
 2024-08-28 12:28:08,592 [brute_force_agent_code] DEBUG: Choosing action purely at random.
 2024-08-28 12:28:08,608 [brute_force_agent_code] DEBUG: End of round: events occurred: WAITED BOMB_EXPLODED KILLED_SELF GOT_KILLED
 2024-08-28 12:28:08,609 [brute_force_agent_code] INFO: Q-table size after round: 43 entries
+=======
+2024-08-31 18:03:02,534 [brute_force_agent_code] INFO: Loading Q-table from saved state.
+2024-08-31 18:03:02,613 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-31 18:03:02,618 [brute_force_agent_code] DEBUG: Events occurred: MOVED_UP
+2024-08-31 18:03:02,730 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-31 18:03:02,744 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-31 18:03:02,827 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-31 18:03:02,843 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-31 18:03:02,926 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-31 18:03:02,940 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-31 18:03:03,025 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-31 18:03:03,038 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-31 18:03:03,126 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-31 18:03:03,139 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-31 18:03:03,230 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-31 18:03:03,246 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-31 18:03:03,330 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-31 18:03:03,344 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-31 18:03:03,431 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-31 18:03:03,448 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-31 18:03:03,529 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-31 18:03:03,544 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-31 18:03:03,630 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-31 18:03:03,649 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-31 18:03:03,731 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-31 18:03:03,749 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-31 18:03:03,833 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-31 18:03:03,851 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-31 18:03:03,933 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-31 18:03:03,950 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-31 18:03:04,036 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-31 18:03:04,055 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-31 18:03:04,136 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-31 18:03:04,149 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-31 18:03:04,236 [brute_force_agent_code] DEBUG: Choosing action purely at random.
+2024-08-31 18:03:04,250 [brute_force_agent_code] DEBUG: Events occurred: BOMB_DROPPED
+2024-08-31 18:03:04,336 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-31 18:03:04,351 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-31 18:03:04,435 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-31 18:03:04,453 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-31 18:03:04,536 [brute_force_agent_code] DEBUG: Choosing action purely at random.
+2024-08-31 18:03:04,556 [brute_force_agent_code] DEBUG: Events occurred: INVALID_ACTION
+2024-08-31 18:03:04,637 [brute_force_agent_code] DEBUG: Choosing action based on Q-table
+2024-08-31 18:03:04,657 [brute_force_agent_code] DEBUG: End of round: events occurred: INVALID_ACTION BOMB_EXPLODED CRATE_DESTROYED CRATE_DESTROYED CRATE_DESTROYED KILLED_SELF GOT_KILLED
+2024-08-31 18:03:04,660 [brute_force_agent_code] INFO: Q-table size after round: 7 entries
+>>>>>>> 82f305df8867242ed4ae7f0f8fad5661aa748ed1
